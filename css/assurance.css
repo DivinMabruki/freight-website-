@@ -2,7 +2,7 @@
 {
     max-width: 70%;
     max-height: max-content;
-    margin-left: 20%;
+    margin-left: 15%;
 }
 
 .white-line
@@ -23,7 +23,7 @@ h6
     font-size: x-large;
 }
 h3
-{   text-align: center;
+{   
     margin-top: 7px; 
     margin-left: 40%;
     width: 300px;

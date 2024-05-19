@@ -76,7 +76,7 @@
 
 
     // Header carousel
-    $(".header-carousel").owlCarousel({
+   $(".header-carousel").owlCarousel({
         autoplay: false,
         smartSpeed: 1500,
         items: 1,
