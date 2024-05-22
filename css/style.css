@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #FF3E41;
+    --primary: rgb(37, 187, 236);
     --secondary: #51CFED;
     --light: #F8F2F0;
     --dark: #060315;
@@ -474,3 +474,10 @@
 .footer .copyright a {
     color: var(--light);
 }
+
+.Explore_more {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center; 
+  }
