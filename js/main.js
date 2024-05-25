@@ -56,7 +56,7 @@
     
     // Back to top button
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
+        if ($(this).scrollTop() > 100) {
             $('.back-to-top').fadeIn('slow');
         } else {
             $('.back-to-top').fadeOut('slow');
@@ -65,6 +65,13 @@
     $('.back-to-top').click(function () {
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
+    });
+
+    // Click event handler for the WhatsApp button
+    $('.back-to-top').click(function (e) {
+        e.preventDefault(); // Prevent the default action of the anchor tag
+        var whatsappURL = $(this).attr('href'); // Get the WhatsApp chat URL
+        window.open(whatsappURL, '_blank'); // Open WhatsApp chat in a new tab
     });
 
 
@@ -112,3 +119,22 @@
     
 })(jQuery);
 
+document.addEventListener("DOMContentLoaded", function() {
+    const faqHeaders = document.querySelectorAll(".card-header h6");
+
+    faqHeaders.forEach(header => {
+        header.addEventListener("click", function() {
+            const collapseElement = this.nextElementSibling;
+
+            // Toggle the visibility of the collapse element
+            if (collapseElement.classList.contains("show")) {
+                collapseElement.classList.remove("show");
+            } else {
+                collapseElement.classList.add("show");
+            }
+
+            // Toggle the chevron direction
+            this.querySelector("span").classList.toggle("rotate");
+        });
+    });
+});
